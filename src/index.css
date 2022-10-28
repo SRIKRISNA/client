@@ -1,20 +1,22 @@
-body{
+body {
   background-color: #444;
   color: white;
   margin: 20px;
   font: 32px "Century Gothic", Futura, sans-serif;
 }
-.game{
+
+.game {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.board-row{
+.board-row {
   display: flex;
   flex-flow: row nowrap;
 }
-.square{
+
+.square {
   background-color: #444;
   color: white;
   border: 1px solid #999;
@@ -24,11 +26,29 @@ body{
   width: 100px;
   height: 100px;
 }
-.square:focus{
+
+.square:focus {
   outline: none;
-  background-color: #222;
+  background-color: rgb(250, 211, 40);
 }
-.status{
+
+.status {
   margin: 20px;
   background-color: #222;
+}
+
+.start-btn {
+  cursor: pointer;
+  margin-top: 20px;
+  padding: 10px 25px;
+  border-radius: 30px;
+  background: #000;
+  color: green;
+  border: none;
+}
+
+.start-btn:hover {
+  background: green;
+  color: white;
+  border: none;
 }

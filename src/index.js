@@ -28,7 +28,7 @@ const Board = () => {
       return;   //no entry takes
     }
     //2. mutate the copy, setting the i-th element to "X"
-    newSquares[i] = xIsNext ? 'X' : 'O'
+    newSquares[i] = xIsNext ? 'A' : 'B'
     //3. call the setSquares function with the mutated copy
     setSquares(newSquares);
     setXIsNext(!xIsNext);
@@ -43,7 +43,7 @@ const Board = () => {
   const winner = calculateWinner(squares);
   const status = winner ? 
   `Winner: ${winner}` :
-  `Next Player : ${xIsNext ? 'X' : 'O'}`
+  `Next Player : ${xIsNext ? 'A' : 'B'}`
 
   return (
     <div >
@@ -62,10 +62,14 @@ const Board = () => {
 }
 
 const Game = () => {
+  const handleStartGame = () => {
+    window.location.reload();
+  }
   return (
     <div className='game'>
       Game
       <Board />
+      <button type='button' className='start-btn' onClick={handleStartGame}>Start New Game</button>
     </div>
   )
 }
