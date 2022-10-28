@@ -12,11 +12,7 @@ const Square = (props) => {
 }
 
 const Board = () => {
-  // const intialSquares = [
-  //   null, null, null,
-  //   null, null, null,
-  //   null, null, null
-  // ]
+  // const intialSquares = [null, null, null, null, null, null, null, null, null] or write as below line
   const intialSquares = Array(9).fill(null);
   const [squares, setSquares] = useState(intialSquares);
   const [xIsNext, setXIsNext] = useState(true);
